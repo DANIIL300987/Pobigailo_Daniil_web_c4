@@ -13,10 +13,12 @@ h1 {
 
 .links {
   margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
+  display: flex;           /* включаем flex */
+  flex-direction: column;  /* размещение по вертикали */
+  align-items: center;     /* выравнивание по центру горизонтально */
+  gap: 20px;               /* расстояние между кнопками */
 }
+
 
 a {
   font-size: 24px;
