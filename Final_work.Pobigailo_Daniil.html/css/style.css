@@ -1,0 +1,228 @@
+/* ===== style.css ===== */
+
+/* Сброс стандартных отступов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #e6f0fa;
+    color: #033e6b;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===== Верхний блок (фон) ===== */
+.hero-section {
+    background: url("../img/background.jpg") no-repeat center center/cover;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-section .overlay {
+    background: rgba(0, 70, 130, 0.4);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section h1 {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+/* ===== Основная сетка ===== */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px 10%;
+}
+
+.category {
+    background: linear-gradient(135deg, #b3d9ff, #cce6ff);
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #a3d1ff, #bfe0ff);
+}
+
+/* ===== Скрытая третья строка ===== */
+.subcategory-grid {
+    display: none; /* по умолчанию скрыто */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 10% 40px 10%;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.subcategory {
+    background: #d6ecff;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subcategory:hover {
+    background: #c2e0ff;
+}
+
+/* ===== Анимация появления ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #a8d2f0;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+    font-size: 0.9rem;
+    color: #033e6b;
+}
+
+/* ===== Адаптивность ===== */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .category, .subcategory {
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+}
+/* ===== Навигация ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #b3d9ff;
+    padding: 10px 5%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #033e6b;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #005fa3;
+    text-decoration: underline;
+}
+
+/* ===== Заголовок подстраниц ===== */
+.subpage-header {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    font-size: 2.5rem;
+}
+
+/* ===== Контент ===== */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 10%;
+}
+
+.content section {
+    max-width: 600px;
+}
+
+.content h2 {
+    color: #034f88;
+    margin-bottom: 10px;
+}
+
+.content p {
+    line-height: 1.6;
+    color: #033e6b;
+}
+
+.content-image {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ===== Для телефона ===== */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .subpage-header {
+        font-size: 1.8rem;
+    }
+}
+/* ===== Подкатегории на странице Vojenské ===== */
+.subcategory-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.subcategory-list a {
+    background: #cce6ff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #033e6b;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.subcategory-list a:hover {
+    background: #99ccff;
+    transform: translateX(5px);
+}
