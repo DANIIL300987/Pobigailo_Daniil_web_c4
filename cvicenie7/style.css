@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulár zamestnanca</title>
+  <style>
+    h2 {
+      text-align: center;
+      color: #444;
+      font-family: Arial, sans-serif;
+      margin-bottom: 10px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 0 auto;
+      background-color: #fff0f5;
+      border: 2px solid #e4b5b5;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      border: 1px solid #e4b5b5;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Заголовки таблицы — по центру */
+    th {
+      background-color: #f8d7da;
+      color: #333;
+      text-align: center;
+      width: 30%;
+    }
+
+    td {
+      text-align: left;
+      width: 70%;
+    }
+
+    tr:hover {
+      background-color: #ffe4e9;
+      transition: background-color 0.3s ease;
+    }
+
+    button, input[type="submit"], input[type="reset"] {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 10px;
+      background-color: #f6b5c0;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+      background-color: #f294a4;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(242,148,164,0.6);
+    }
+
+    .form-buttons {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    body {
+      background-color: #fff7fa;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Formulár zamestnanca</h2>
+
+  <form>
+    <table>
+      <tr>
+        <th>Meno</th>
+        <td><input type="text" name="meno" required></td>
+      </tr>
+      <tr>
+        <th>Priezvisko</th>
+        <td><input type="text" name="priezvisko" required></td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td><input type="email" name="email" required></td>
+      </tr>
+      <tr>
+        <th>Telefónne číslo</th>
+        <td><input type="tel" name="telefon" pattern="[0-9+ ]{9,15}" required></td>
+      </tr>
+      <tr>
+        <th>Adresa</th>
+        <td><input type="text" name="adresa"></td>
+      </tr>
+      <tr>
+        <th>Pozícia</th>
+        <td><input type="text" name="pozicia"></td>
+      </tr>
+    </table>
+
+    <div class="form-buttons">
+      <input type="reset" value="OBNOV FORMULÁR">
+      <input type="submit" value="ODOSLI FORMU">
+    </div>
+  </form>
+
+</body>
+</html>
