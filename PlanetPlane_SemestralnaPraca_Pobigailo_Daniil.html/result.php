@@ -1,5 +1,4 @@
 <?php
-// Bezpečné spracovanie vstupov
 function safe($value) {
     return htmlspecialchars(trim($value), ENT_QUOTES, 'UTF-8');
 }
@@ -21,15 +20,12 @@ $card      = safe($_POST['card'] ?? '');
     <title>Ďakujeme za objednávku | PlanePlanet</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
 <header class="header">
     <div class="container">
 
@@ -48,7 +44,6 @@ $card      = safe($_POST['card'] ?? '');
     </div>
 </header>
 
-<!-- ================= MAIN ================= -->
 <main class="main">
     <div class="container">
 
@@ -102,12 +97,11 @@ $card      = safe($_POST['card'] ?? '');
     </div>
 </main>
 
-<!-- ================= FOOTER ================= -->
 <footer class="footer">
     <div class="container">
         <p>Meno a Priezvisko: Daniil Pobiigailo</p>
-        <p>OŠP: doplň</p>
-        <p>Dátum spracovania: 30.01.2026</p>
+        <p>OŠP: Riadenie leteckej prevádzky.skupina Bravo</p>
+        <p>Dátum spracovania: 29.01.2026</p>
     </div>
 </footer>
 
